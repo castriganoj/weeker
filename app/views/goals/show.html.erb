@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @weekly_goal.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @weekly_goal.description %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @weekly_goal.completed %>
+</p>
+
+<%= link_to 'Edit', edit_weekly_goal_path(@weekly_goal) %> |
+<%= link_to 'Back', weekly_goals_path %>
