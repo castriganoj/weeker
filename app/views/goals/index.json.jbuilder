@@ -1,4 +1,4 @@
-json.array!(@weekly_goals) do |weekly_goal|
-  json.extract! weekly_goal, :id, :title, :description, :completed
-  json.url weekly_goal_url(weekly_goal, format: :json)
+json.array!(@goals) do |goal|
+  json.extract! goal, :id, :title, :description, :completed
+  json.url goal_url(goal, format: :json)
 end
