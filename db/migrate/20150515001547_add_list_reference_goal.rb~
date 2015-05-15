@@ -1,0 +1,4 @@
+class AddListReferenceGoal < ActiveRecord::Migration
+  def change
+  end
+end
