@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :lists
+
   resources :goals
  root :to => redirect('/goals')
   # The priority is based upon order of creation: first created -> highest priority.
