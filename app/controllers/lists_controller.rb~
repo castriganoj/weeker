@@ -22,7 +22,7 @@ debugger
 		week_number = d.strftime("%U").to_i
 		#first_day_week = d.at_beginning_of_week
 		#last_day_week = d.at_end_of_week
-		@list.save!(:name => week_number)
+		@list.save(:name => week_number)
 
 
   end

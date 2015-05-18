@@ -1,7 +1,17 @@
 class List < ActiveRecord::Base
 
-	attr_accessible :name
+	attr_reader :name
+	
 		
 	has_many :goals, dependent: :destroy
+
+private
+    def list_name
+			d = Date.today
+			week_number = d.strftime("%U").to_i
+			#first_day_week = d.at_beginning_of_week
+			#last_day_week = d.at_end_of_week
+      self.name ||= week_number
+    end
 
 end
