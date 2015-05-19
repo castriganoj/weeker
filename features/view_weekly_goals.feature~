@@ -5,7 +5,8 @@ Feature: View goals for week
   Scenario: view features for the week
 
     Given I am on the home page
-    And I should see the current week
+		And I follow "21"
+    Then I should see "the current week"
     And the goals for the week should be listed below
     And the id should not display
     And A title and description for each goal should display

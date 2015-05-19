@@ -1,11 +1,12 @@
 class List < ActiveRecord::Base
 
-	attr_reader :name
+	attr_acessible :name
+	
 		
 	has_many :goals, dependent: :destroy
 
 private
-    def default_values
+    def list_name
 			d = Date.today
 			week_number = d.strftime("%U").to_i
 			#first_day_week = d.at_beginning_of_week

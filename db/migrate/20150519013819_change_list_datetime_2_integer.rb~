@@ -1,0 +1,4 @@
+class ChangeListDatetime2Integer < ActiveRecord::Migration
+  def change
+  end
+end
