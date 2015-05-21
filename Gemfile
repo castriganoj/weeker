@@ -54,6 +54,8 @@ group :development, :test do
   gem 'capybara'
 	gem 'railroady'
 	gem 'launchy'
-	gem 'debugger'
+	gem 'rspec'
+	gem'autotest'
+#	gem 'debugger'
 end
 
