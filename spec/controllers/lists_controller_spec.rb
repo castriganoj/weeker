@@ -3,15 +3,14 @@ require 'rails_helper'
 
 RSpec.describe ListsController, type: :controller do
   
-     describe ListsController do
-
-
-  it "should redirect to the current week's page if new user session" do
-    get :index
-    this_week = Date.today.strftime("%U").to_i
-    response.should redirect_to list_goals_path(this_week)
-  end
-end
+     describe "new user session should redirect to current week's list" do
+        it "should redirect to the current week's list if new user session" do
+          session[:user_id] == nil
+          {:get => '/'}
+          this_week = Date.today.strftime("%U").to_i
+          controller.should redirect_to(list_path(this_week))
+        end
+      end
 
   # This should return the minimal set of attributes required to create a valid
   # List. As you add validations to List, be sure to

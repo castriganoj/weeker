@@ -6,7 +6,7 @@ require 'rails_helper'
   it "should redirect to the current week's page" do
     get '/lists'
     this_week = Date.today.strftime("%U").to_i
-    response.should redirect_to(lists_path/this_week)
+    response.should redirect_to(list_goals_path(this_week))
   end
 end
   
