@@ -1,11 +1,13 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
   before_action do 
-		if session[:user_id] = !nil
+    		  debugger
+		if session[:user_id] == nil
       d = Date.today
       week_number = d.strftime("%U").to_i
-      list = List.find_by_name(week_number)
-      redirect_to list_path(list)
+      @list = List.find_by_name(week_number)
+      session[:user_id] = 1
+      redirect_to list_goals_path(@list)
     end
   end
 
@@ -20,7 +22,7 @@ class ListsController < ApplicationController
 
 def show
 
-  end
+end
 
   # GET /lists/new
   def new

@@ -6,7 +6,7 @@ RSpec.describe ListsController, type: :controller do
      describe ListsController do
 
 
-  it "should redirect to the current week's page" do
+  it "should redirect to the current week's page if new user session" do
     get :index
     this_week = Date.today.strftime("%U").to_i
     response.should redirect_to list_goals_path(this_week)

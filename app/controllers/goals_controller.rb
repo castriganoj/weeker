@@ -15,6 +15,7 @@ class GoalsController < ApplicationController
   # GET /goals/1
   # GET /goals/1.json
   def show
+
     @list = List.find(params[:list_id])
     @goal = @list.goals.find(params[:id])
 

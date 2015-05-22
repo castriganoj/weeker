@@ -56,6 +56,6 @@ group :development, :test do
 	gem 'launchy'
 	gem 'rspec'
 	gem 'rspec-autotest'
-#	gem 'debugger'
+	gem 'byebug'
 end
 
