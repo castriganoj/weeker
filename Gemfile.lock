@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ZenTest (4.11.0)
     actionmailer (4.1.6)
       actionpack (= 4.1.6)
       actionview (= 4.1.6)
@@ -30,8 +29,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (5.0.1.20140414130214)
-    autotest (4.4.6)
-      ZenTest (>= 4.4.1)
     bootstrap-will_paginate (0.0.10)
       will_paginate
     builder (3.2.2)
@@ -127,6 +124,8 @@ GEM
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
       rspec-mocks (~> 3.2.0)
+    rspec-autotest (1.0.0)
+      rspec-core (>= 2.99.0.beta1, < 4.0.0)
     rspec-core (3.2.3)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.1)
@@ -181,7 +180,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autotest
   bootstrap-will_paginate
   capybara
   coffee-rails (~> 4.0.0)
@@ -198,6 +196,7 @@ DEPENDENCIES
   railroady
   rails (= 4.1.6)
   rspec
+  rspec-autotest
   rspec-rails
   sdoc (~> 0.4.0)
   spring
