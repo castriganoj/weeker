@@ -1,0 +1,8 @@
+class WelcomeController < ApplicationController
+  def index
+		d = Date.today
+		week_number = d.strftime("%U").to_i
+		@list = List.find_by_name(week_number)
+		redirect_to list_path(@list)
+	end
+end
