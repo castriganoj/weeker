@@ -1,20 +1,21 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
- # before_action do 
-	#	if session[:user_id] == nil
-  #    d = Date.today
-   #  week_number = d.strftime("%U").to_i
-   #   @list = List.find_by_name(week_number)
-   #   session[:user_id] = 1
-   #  redirect_to lists_path(@list)
-  #  end
-  #end
+=begin	
+		debugger
+		before_action do
+			if session == nil 
+		   d = Date.today
+		   week_number = d.strftime("%U").to_i
+		    @list = List.find_by_name(week_number)
+		   redirect_to lists_path(@list)
+	 	  end
+	 	end
+=end
 
 
   # GET /lists
   # GET /lists.json
-  def index
-    debugger
+  def index 
     @lists = List.all
   end
 

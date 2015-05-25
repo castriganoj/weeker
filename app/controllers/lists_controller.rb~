@@ -1,9 +1,19 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
+			debugger
+		before_action do
+			if session == nil 
+		   d = Date.today
+		   week_number = d.strftime("%U").to_i
+		    @list = List.find_by_name(week_number)
+		   redirect_to lists_path(@list)
+	 	  end
+	 	end
+
 
   # GET /lists
   # GET /lists.json
-  def index
+  def index 
     @lists = List.all
   end
 
@@ -12,7 +22,7 @@ class ListsController < ApplicationController
 
 def show
 
-  end
+end
 
   # GET /lists/new
   def new
@@ -20,7 +30,7 @@ def show
 		week_number = d.strftime("%U").to_i
 		#first_day_week = d.at_beginning_of_week
 		#last_day_week = d.at_end_of_week
-		@list.create(:name => week_number)
+		@list = List.create(:name => week_number)
 
 
   end

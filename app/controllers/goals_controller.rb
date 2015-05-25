@@ -1,9 +1,12 @@
 class GoalsController < ApplicationController
-  before_action :set_goal, only: [:show, :edit, :update, :destroy]
+  before_action  only: [:show, :edit, :update, :destroy]
+
+# goes before only :set_goal,
 
   # GET /goals
   # GET /goals.json
   def index
+		
     @list = List.find(params[:list_id])
     @goals = @list.goals.paginate(page: params[:page], per_page: 5)
     respond_to do |format|
