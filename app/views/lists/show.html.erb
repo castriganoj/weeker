@@ -20,57 +20,17 @@
   <h1><%=t '.title', :default => "#{model_class.model_name.name} for week #{@list.name}"  %></h1>
 </div>
 <!-- end list -->
-
+ 
 <!-- Begin goals -->
-<section class="content-block gallery-1">
-    	
+<% if @list.goals.any? %>
+  <section class="content-block gallery-1">
     	<div class="container">
-    	
-	    	<div class="underlined-title">
+         	<div class="underlined-title">
 	    		<div class="editContent" style=""><h1>Goals</h1></div>
 	    		<hr>
 	    		<div class="editContent" style=""><h2>Add Date here </h2></div>
 	    	</div>
-			<div class="editContent"><ul class="filter">
-	<li class="active"><a href="#" data-filter="*">ABC</a></li>
-	<li><a href="#" data-filter=".artwork">Date</a></li>
-	<li><a href="#" data-filter=".creative">Priority</a></li>
-</ul></div>
-            <!-- /.gallery-filter -->
-            
-            <div class="row">
-                <div id="isotope-gallery-container">
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
-                        <div class="gallery-item">
-                            <div class="gallery-thumb">
-                                <img src="http://placehold.it/800x600" class="img-responsive" alt="1st gallery Thumb">
-                                <div class="image-overlay"></div>
-                                <a href="http://placehold.it/800x600" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="gallery-details">
-                            	<div class="editContent" style=""><p>
-	<strong>Blog Post</strong>
-</p></div>
-                            	<div class="editContent">
-	                                <p>Nullam id dolor id nibh ultricies vehicula.</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    
-                </div>
-                <!-- /.isotope-gallery-container -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </div></section>
-    <!--// End Gallery 1-2 --></div><!-- /#page -->
-<% if @list.goals.any? %>
-  <h2>Goals</h2>
-  <%= render @list.goals %>
+        <%= render @list.goals %>
 <% end %>
 
 <h2>Add goal item</h2>

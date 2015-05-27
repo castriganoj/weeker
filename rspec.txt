@@ -1,0 +1,9 @@
+Run options: include {:locations=>{"./spec/controllers/lists_controller_spec.rb"=>[9]}}
+
+ListsController
+  ListsController
+    should redirect to the current week's page
+
+Finished in 0.03077 seconds (files took 8.43 seconds to load)
+1 example, 0 failures
+
