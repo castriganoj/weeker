@@ -14,29 +14,60 @@
 </ul>
 <!--end list controls-->
 
-<!-- List -->
+<!-- List --><!--plan to add starterkit mock up here--> 
 <%- model_class = List -%>
 <div class="page-header">
   <h1><%=t '.title', :default => "#{model_class.model_name.name} for week #{@list.name}"  %></h1>
 </div>
-
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @list.name %></dd>
-</dl>
-
-<%= link_to t('.back', :default => t("helpers.links.back")),
-              lists_path, :class => 'btn btn-default'  %>
-<%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_list_path(@list), :class => 'btn btn-default' %>
-<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              list_path(@list),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
 <!-- end list -->
 
 <!-- Begin goals -->
+<section class="content-block gallery-1">
+    	
+    	<div class="container">
+    	
+	    	<div class="underlined-title">
+	    		<div class="editContent" style=""><h1>Goals</h1></div>
+	    		<hr>
+	    		<div class="editContent" style=""><h2>Add Date here </h2></div>
+	    	</div>
+			<div class="editContent"><ul class="filter">
+	<li class="active"><a href="#" data-filter="*">ABC</a></li>
+	<li><a href="#" data-filter=".artwork">Date</a></li>
+	<li><a href="#" data-filter=".creative">Priority</a></li>
+</ul></div>
+            <!-- /.gallery-filter -->
+            
+            <div class="row">
+                <div id="isotope-gallery-container">
+                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
+                        <div class="gallery-item">
+                            <div class="gallery-thumb">
+                                <img src="http://placehold.it/800x600" class="img-responsive" alt="1st gallery Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="http://placehold.it/800x600" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="gallery-details">
+                            	<div class="editContent" style=""><p>
+	<strong>Blog Post</strong>
+</p></div>
+                            	<div class="editContent">
+	                                <p>Nullam id dolor id nibh ultricies vehicula.</p>
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+                <!-- /.isotope-gallery-container -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div></section>
+    <!--// End Gallery 1-2 --></div><!-- /#page -->
 <% if @list.goals.any? %>
   <h2>Goals</h2>
   <%= render @list.goals %>
