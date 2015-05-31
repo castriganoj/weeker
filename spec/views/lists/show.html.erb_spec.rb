@@ -5,7 +5,7 @@ RSpec.describe "lists/show", type: :view do
     @list = assign(:list, List.create!())
   end
 
-  it "renders attributes in <p>" do
-    render
+  it "has Goals in h1 <p>" do
+    find("a", :text => "Goals")
   end
 end

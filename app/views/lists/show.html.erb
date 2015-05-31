@@ -14,7 +14,7 @@
 </ul>
 <!--end list controls-->
 
-<!-- List --><!--plan to add starterkit mock up here--> 
+<!-- List --><!--plan to add starter kit mock up here--> 
 <%- model_class = List -%>
 <div class="page-header">
   <h1><%=t '.title', :default => "#{model_class.model_name.name} for week #{@list.name}"  %></h1>
@@ -30,8 +30,22 @@
 	    		<hr>
 	    		<div class="editContent" style=""><h2>Add Date here </h2></div>
 	    	</div>
+	    	<div class="editContent"><ul class="filter">
+	<li class="active"><a href="#" data-filter="*">ABC</a></li>
+	<li><a href="#" data-filter=".artwork">Date</a></li>
+	<li><a href="#" data-filter=".creative">Priority</a></li>
+</ul></div>
+<!-- /.gallery-filter -->
+
+<div class="row">
         <%= render @list.goals %>
 <% end %>
+</div>
+<!-- /.row -->
+</div>
+<!-- /.container -->
+</div></section>
+<!--// End Gallery 1-2 --></div><!-- /#page -->
 
 <h2>Add goal item</h2>
 <%= render "goals/form"%>

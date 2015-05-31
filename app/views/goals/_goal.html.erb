@@ -1,45 +1,20 @@
 <%- model_class = goal.class -%>
+	<div id="isotope-gallery-container">
+		<div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
+			<div class="gallery-item">
+				<div class="gallery-thumb">
+					<h3><%=goal.title%></h3>
+					<dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+					<dd><%= text_area_tag :description, goal.description %></dd>			
+					<div class="image-overlay"></div>
+					<div class="gallery-zoom"><%= link_to 'edit',list_goal_path(@list, goal)%></div>
+					<a class="gallery-link"><dt><strong><%= check_box :completed, goal.completed %></strong></dt></a>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	<!-- /.isotope-gallery-container -->
 
-			<div class="editContent"><ul class="filter">
-	<li class="active"><a href="#" data-filter="*">ABC</a></li>
-	<li><a href="#" data-filter=".artwork">Date</a></li>
-	<li><a href="#" data-filter=".creative">Priority</a></li>
-</ul></div>
-            <!-- /.gallery-filter -->
-            
-            <div class="row">
-                <div id="isotope-gallery-container">
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
-                        <div class="gallery-item">
-                            <div class="gallery-thumb">
-                                <img src="http://placehold.it/800x600" class="img-responsive" alt="1st gallery Thumb">
-                                <div class="image-overlay"></div>
-                                <a href="http://placehold.it/800x600" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="gallery-details">
-                            	<div class="editContent">
-                            	   <h3><%=goal.title%></h3>
-                            	</div>
-                            	<div class="editContent">
-	                                <p>Nullam id dolor id nibh ultricies vehicula.</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    
-                </div>
-                <!-- /.isotope-gallery-container -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </div></section>
-    <!--// End Gallery 1-2 --></div><!-- /#page -->
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:item) %>:</strong></dt>
-  <dd><%= text_area_tag :description, goal.description %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:completed) %>:</strong></dt>
-  <dd><%= check_box_tag :completed, goal.completed.to_s, goal.completed, disabled: true %></dd>
-</dl>
+	
