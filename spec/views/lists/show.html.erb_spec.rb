@@ -1,11 +1,14 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe "lists/show", type: :view do
   before(:each) do
-    @list = assign(:list, List.create!())
+    @goal = FactoryGirl.create(:list_with_goals)
+    @list = List.find(1)
+    visit list_path(@list)
   end
 
-  it "has Goals in h1 <p>" do
-    find("a", :text => "Goals")
+  it "has Goals in h1" do
+    # test for list h1....   find('h1', :text =>  'List for week 22')
+    find('h1', :text =>  'Goals')
   end
 end
