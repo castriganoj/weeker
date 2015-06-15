@@ -1,3 +1,4 @@
+<!-- begin goal box -->
 <%- model_class = goal.class -%>
 	<div id="isotope-gallery-container">
 		<div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
@@ -5,16 +6,18 @@
 				<div class="gallery-thumb">
 					<h3><%=goal.title%></h3>
 					<dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-					<dd><%= text_area_tag :description, goal.description %></dd>			
+						<dd class = "goalDescription"><%=   goal.description %></dd>
+					<dt><strong><%= model_class.human_attribute_name(:created_at) %>:</strong></dt>
+						<dd class = "goalCreated"><%=  distance_of_time_in_words_to_now(goal.created_at) %></dd>
+					<dt><strong><%= model_class.human_attribute_name(:updated_at) %>:</strong></dt>
+						<dd class = "goalUpdated"><%=   distance_of_time_in_words_to_now(goal.updated_at) %></dd>
 					<div class="image-overlay"></div>
 					<div class="gallery-zoom"><%= link_to 'edit',list_goal_path(@list, goal)%></div>
 					<a class="gallery-link"><dt><strong><%= check_box :completed, goal.completed %></strong></dt></a>
 				</div>
 			</div>
 		</div>
-		
-		
 	</div>
-	<!-- /.isotope-gallery-container -->
+<!-- goal box -->
 
 	

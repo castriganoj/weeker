@@ -11,4 +11,9 @@ RSpec.describe "lists/show", type: :view do
     # test for list h1....   find('h1', :text =>  'List for week 22')
     find('h1', :text =>  'Goals')
   end
+  
+   it "has date range in h2" do
+    # test for list h1....   find('h1', :text =>  'List for week 22')
+    find('h1', :text =>  'Goals')
+  end
 end

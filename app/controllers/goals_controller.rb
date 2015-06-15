@@ -42,7 +42,7 @@ class GoalsController < ApplicationController
   # GET /goals/1/edit
   def edit
 		@list = List.find(params[:list_id])
-		@goal = @list.goals.find(parmas[:id])
+		@goal = @list.goals.find(params[:id])
   end
 
   # POST /goals
