@@ -3,7 +3,7 @@ var GoalButton = {
        //add in + sign for new goal
       var plusButton = $('<button type="button" class="glyphicon glyphicon-plus btn btn-primary"></button>');
       $('#newGoals').hide()
-      plusButton.appendTo($('body')).attr('id', 'rightBox');
+      plusButton.appendTo($('#listContainer')).attr('id', 'rightBox');
       $(document).on('click', '#rightBox', GoalButton.showGoal);
    }
    
