@@ -28,13 +28,12 @@ end
 
   # GET /lists/new
   def new
-		d = Date.today
-		week_number = d.strftime("%U").to_i
+		#d = Date.today
+		#week_number = d.strftime("%U").to_i
 		#first_day_week = d.at_beginning_of_week
 		#last_day_week = d.at_end_of_week
-		@list = List.create(:name => week_number)
-
-
+		@list = List.create() #(:name => week_number)
+    redirect_to list_path(@list)
   end
 
   # GET /lists/1/edit

@@ -1,11 +1,17 @@
 var GoalButton = {
    setup: function() {
-      // add hidden 'div' to end of page to display plus sign:
+       //add in + sign for new goal
       var plusButton = $('<button type="button" class="glyphicon glyphicon-plus btn btn-primary"></button>');
+      $('#newGoals').hide()
       plusButton.appendTo($('body')).attr('id', 'rightBox');
-      $(document).on('click', '#rightBox', GoalButton.getNewGoal);
+      $(document).on('click', '#rightBox', GoalButton.showGoal);
    }
-
+   
+     ,showGoal:function(){
+        $('#newGoals').slideToggle( "slow" );
+ }
+   
+/***** just hide and show new goal instead of ajaxing it*********************
  ,getNewGoal: function() {
    $.ajax({
       type: 'Post',
@@ -32,11 +38,10 @@ var GoalButton = {
    // $('#closeLink').click(MoviePopup.hideMovieInfo);
    // return(false);  // prevent default link action
   }
+**************************************************/
 
-   
-   
-   
 }
+
 $( document ).ready(function() {
   $(GoalButton.setup);
 });
