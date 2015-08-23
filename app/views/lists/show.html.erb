@@ -16,9 +16,9 @@
 
 <!-- List --><!--plan to add starter kit mock up here--> 
 <%- model_class = List -%>
-<div class="page-header">
+<div class="page-header" id = "listContainer">
   <h1><%=t '.title', :default => "#{model_class.model_name.name} for week #{@list.name}"  %></h1>
-</div>
+
 <!-- end list -->
  
 <!-- Begin goals -->
@@ -37,19 +37,19 @@
 </ul></div>
 <!-- /.gallery-filter -->
 <!-- begin goal boxes -->
-<div class="row">
         <%= render @list.goals %>
 <% end %>
 <!-- end goal boxes-->
 </div>
 <!-- /.row -->
-</div>
-<!-- /.container -->
-</div></section>
-<!--// End Gallery 1-2 --></div><!-- /#page -->
+</section>
 <section id = "newGoals">
   <h2>Add goal item</h2>
   <%= render "goals/form"%>
 </section>
-
 <!-- end goals -->
+</div>
+</div>
+</div>
+</div>
+<!-- end list contrainer-->

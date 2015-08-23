@@ -1,4 +1,4 @@
-<%= form_for [@list, if @goal.nil? then @list.goals.build else @goal end], :html => { :class => 'form-horizontal' } do |f| %>s
+<%= form_for [@list, if @goal.nil? then @list.goals.build else @goal end], :html => { :class => 'form-horizontal' } do |f| %>
 
     <% if @list.errors.any? %>
     <div id="error_expl" class="panel panel-danger">

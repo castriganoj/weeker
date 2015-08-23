@@ -1,1 +1,5 @@
-#rightBox {position:absolute;right:10%;top:50%;  font-size: x-large;font-weight: 600;padding: 5px 10px;line-height:1;}
+#rightBox {font-size: x-large;font-weight: 600;padding: 5px 10px;line-height:1;}
+
+#listContainer{margin:50px auto; width:50%; text-align:center;}
+
+.container{width:100%;}
